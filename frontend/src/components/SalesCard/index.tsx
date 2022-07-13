@@ -1,3 +1,5 @@
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import './styles.css'
 import NotificationButton from '../NotificationButton'
 function SalesCard() {
@@ -7,17 +9,19 @@ function SalesCard() {
                 <h2 className="dsmeta-sales-title">Vendas</h2>
                 <div>
                     <div className="dsmeta-form-control-container">
-                        <input
+                        <DatePicker
+                            selected={new Date()}
+                            onChange={(date: Date) => { }}
                             className="dsmeta-form-control"
-                            type="text"
-                            value="01/02/2022"
+                            dateFormat="dd/MM/yyyy"
                         />
                     </div>
                     <div className="dsmeta-form-control-container">
-                        <input
+                        <DatePicker
+                            selected={new Date()}
+                            onChange={(date: Date) => { }}
                             className="dsmeta-form-control"
-                            type="text"
-                            value="30/04/2022"
+                            dateFormat="dd/MM/yyyy"
                         />
                     </div>
                 </div>
@@ -45,7 +49,7 @@ function SalesCard() {
                                 <td>
                                     <div className="dsmeta-btn-container">
                                         <div className="dsmeta-red-btn">
-                                            <NotificationButton/>
+                                            <NotificationButton />
                                         </div>
                                     </div>
                                 </td>
@@ -60,7 +64,7 @@ function SalesCard() {
                                 <td>
                                     <div className="dsmeta-btn-container">
                                         <div className="dsmeta-red-btn">
-                                        <NotificationButton/>
+                                            <NotificationButton />
                                         </div>
                                     </div>
                                 </td>
